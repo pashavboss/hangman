@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+</head>
+
+<body>
+
+    <header>
+        <button class="back-to-menu d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+                <path fill="#FFF" fill-rule="evenodd" d="M7.4 5.4L6 4 0 10 6 16 7.4 14.6 2.8 10z" transform="translate(0 -4)"/>
+            </svg>
+            Back
+        </button>
+        
+        <h1>Hangman</h1>
+    </header>
+
+    <!-- Start Category Container -->
+
+    
+
+    <div id="category-container">
+        <div class="category-select">
+            <p class="info">Please select the category:</p>
+            <div class="categories-btns">
+                <button data-category="random">Random</button>
+                <button data-category="animals">Animals</button>
+                <button data-category="countries">Countries</button>
+                <button data-category="states">States of the USA</button>
+                <button data-category="food">Food</button>
+                <button data-category="sports">Sports</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Category Container -->
+
+
+    <p class="info category d-none">Selected category is: <span id="category-name"></span></div>
+
+    <!-- Start Game Container -->
+
+    <div id="game-container" class="d-none">
+        <div class="letters">
+            <h5>Letters</h5>
+            <div id="alphabet-buttons"></div>
+        </div>
+        <div class="game-info">
+            <h5 id="game-status"></h5>
+            <div id="canvas"></div>
+            <div id="word-line"></div>
+        </div>
+    </div>
+
+    <!-- End Category Container -->
+
+    <!-- Start Modals -->
+
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <span id="modalClose" class="close no-select">&times;</span>
+            <div class="content">
+                <h5>Game Over!</h5>
+                <p>You have run out of attempts. The word was <spam id="word"></spam>
+                </p>
+                <button class="play-again">Play again</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="won-modal" class="modal">
+        <div class="modal-content">
+            <span id="modalClose" class="close no-select">&times;</span>
+            <div class="content">
+                <h5>You won!</h5>
+                <p>Congratulations, you are a very good player!</p>
+                <button class="play-again">Play again</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- End Modals -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
