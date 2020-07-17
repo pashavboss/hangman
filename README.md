@@ -1,2 +1,2 @@
 ## Hangman
-[Main page](https://pashavboss.github.io/hangman/)
+[Main page](https://pashavboss.github.io/hangman/index.html)
